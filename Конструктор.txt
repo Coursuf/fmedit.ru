@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>[TITLE]</title>
+<link type="text/css" rel="StyleSheet" href="/_st/my.css" />
+</head>
+
+<div id="wrapper">
+<body>
+
+<!-- <header> -->
+<div class="head">
+
+<div class="login_block">
+<?if($USER_LOGGED_IN$)?>
+<div style="margin-left:110px;margin-top:70px;"></div>
+
+
+<div style="list-style:none;text-align:left;margin-left:110px;">
+<li>Привет, <b>$USERNAME$</b>! <a href="/index/8" target="_blank" style="color:#509cd1;">(В профиль)</a></li>
+<li>Вы с нами уже <b>$USER_REG_DAYS$</b> дней!</li>
+<li>Ваш IP: <b>$IP_ADDRESS$</b></li>
+<li>Вы входите в группу: <b>$USER_GROUP$</b></li>
+<li>Ваших сообщений: <b><a href="/index/14" style="color:#fff;">$UNREAD_PM$</b></a></li>
+<li><a href="/index/10" style="color:#fff;"><u>Покинуть кабинет</u></a></li>
+</div>
+ <?else?>
+<div style="margin-left:110px;margin-top:70px;"><script type="text/javascript">
+sendFrm549331=function(){
+	var o=$('#frmLg549331')[0],pos=_uGetOffset(o),o2=$('#blk549331')[0];
+	document.body.insertBefore(o2,document.body.firstChild);
+	$(o2).css({top:(pos['top'])+'px',left:(pos['left'])+'px',width:o.offsetWidth+'px',height:o.offsetHeight+'px',display:''}).html('<div align="left" style="padding:5px;"><div class="myWinLoad"></div></div>');
+	_uPostForm('frmLg549331',{type:'POST',url:'/index/sub/',error:function() {
+		$('#blk549331').html('<div align="left" style="padding:10px;"><div class="myWinLoadSF" title="Невозможно выполнить запрос, попробуйте позже"></div></div>');
+		_uWnd.alert('<div class="myWinError">Невозможно выполнить запрос, попробуйте позже</div>','',{w:250,h:90,tm:3000,pad:'15px'});
+		setTimeout("$('#blk549331').css('display','none');",'1500');}});
+}
+</script>
+$LOGIN_FORM$
+</div>
+ <?endif?>
+</div>
+
+</div>
+
+
+<div class="hor_menu">
+<div style="float:left;padding:0;margin:0">
+<div class="ho_me_pol"></div>
+<a href="/"><div>ГЛАВНАЯ СТРАНИЦА</div></a>
+<div class="ho_me_por"></div><div class="ho_me_pol"></div>
+<a href="/load"><div>архив файлов</div></a>
+<div class="ho_me_por"></div><div class="ho_me_pol"></div>
+<a href="/forum"><div>форум</div></a>
+<div class="ho_me_por"></div><div class="ho_me_pol"></div>
+<a href="/photo"><div>каталог изображений</div></a>
+<div class="ho_me_por"></div><div class="ho_me_pol"></div>
+<a href="/search"><div>поиск</div></a>
+<div class="ho_me_por"></div><div class="ho_me_pol"></div>
+</div>
+
+
+<a style="float:right;text-decoration:none;">
+$WDAY$, $DATE$, $TIME$
+</a>
+
+
+</div><!-- </header> -->
+
+<div id="contentBlock">
+
+<div class="column"><!-- <container> --><!-- <block> -->
+<div class="boxTable">
+<div class="boxTitle">TITLE</div>
+<div class="boxCont">
+CONTENT
+<div class="bott"></div>
+</div>
+</div>
+<!-- </block> --><!-- </container> --></div>
+<div class="cont"><!-- <body> -->[BODY]
+<!-- </body> --></div>
+
+</div>
+<!-- <footer> --><div class="foot_menu">
+<div style="padding:0;margin:0;text-align:center;">
+<div align="center">
+<a href="/">Главная страница</a>
+<a href="/load">Архив файлов</a>
+<a href="/forum">Форум</a>
+<a href="/blog">Статьи и видео</a>
+<a href="/photo">Каталог изображений</a>
+</div>
+</div></div>
+
+<a href="#" id="toTop">Вверх <img src="/top/to_top.gif" border="0" align="absmiddle" /></a>
+<script src="/top/jquery.scroll.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+$("#toTop").scrollToTop();
+});
+</script>
+<div class="footer">
+<div style="padding-top:29px;">
+<li>Все программы имеют законных правообладателей и предоставлены для ознакомления в информационных целях</li>
+<li>$POWERED_BY$ <a href="/sitemap.xml">Карта сайта</a> | <a href="http://vk.com/djmuzhik/">A.Muzhenko</a></li>
+</div>
+<div style="text-align:center;padding-top:56px;">
+
+</div>
+</div>
+</div><!-- </footer> -->
+
+<script type='text/javascript' src='/iload/iLoad.js'></script>
+</body>
+</div>
+</html>
+<!-- <popup> -->
+<table border="0" cellpadding="2" cellspacing="1" width="100%">
+<tr><td align="center"><b>[TITLE]</b></td></tr>
+<tr><td align="center" style="padding:5px;">[BODY]</td></tr>
+</table>
+<!-- </popup> -->
